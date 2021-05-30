@@ -1,5 +1,5 @@
-django = ""
-djangorestframework = ""
-django-rest-auth = ""
-django-allauth = ""
-django-cors-headers = ""
+django==2.2
+djangorestframework
+django-rest-auth
+django-allauth
+django-cors-headers
