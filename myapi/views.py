@@ -18,7 +18,6 @@ from .models import Hero
 from .serializers import HeroSerializer
 from rest_framework.decorators import api_view
 from django.core.mail import send_mail
-from django.conf import settings
 import time
 @api_view(['GET'])
 def heroList(request):
@@ -73,9 +72,7 @@ def heroSend(request):
     email = emailcontent["data_email"]
     subject = emailcontent['data']['subject']
     content = emailcontent['data']['emailcontent']
-    print(email)
-    send_mail(subject, content, settings.EMAIL_HOST_USER, email)
+    send_mail(subject, content, 'SWEET', email, fail_silently=False,)
     return Response("send")
-    
     
     
