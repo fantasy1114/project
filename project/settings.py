@@ -25,7 +25,7 @@ SECRET_KEY = '39tl#ywdu(^i#u2f-rosga7vn)&uchp^h96myvl4wo80a=+4g*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -130,10 +130,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 
-# CORS_ORIGIN_ALLOW_ALL = True
+CORS_ORIGIN_ALLOW_ALL = True
 # LOGIN_URL='/admin/login/'
 
-CORS_ORIGIN_ALLOW_ALL=True
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.
